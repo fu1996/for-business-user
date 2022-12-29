@@ -1,0 +1,1 @@
+export default '测试默认引入 aa';

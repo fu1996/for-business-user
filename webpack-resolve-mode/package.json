@@ -1,0 +1,25 @@
+{
+  "name": "webpack.demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:aa": "webpack --env user=aa",
+    "build:bb": "webpack --env user=bb",
+    "build:cc": "webpack --env user=cc",
+    "dev": "webpack-dev-server --env user=aa"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@fu1996/webapck-resolver-mode-plugin": "^1.0.2"
+  }
+}

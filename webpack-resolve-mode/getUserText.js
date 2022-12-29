@@ -1,0 +1,1 @@
+export default '运行通用代码'
