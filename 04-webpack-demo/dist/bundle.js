@@ -15,7 +15,7 @@
   \******************/
 /***/ (() => {
 
-eval("const addText = text => {\n    const div = document.createElement('div');\n    div.innerHTML = text;\n    document.body.appendChild(div);\n}\n\nconst getProcessText = () => {\n    if (false) {} else {\n        return '开发环境的代码';\n    }\n}\n\naddText(getProcessText())\n\nconst getUserText = () => {\n    if (true) {\n        return '运行客户aa 的代码';\n    } else {}\n}\n\naddText(getUserText())\n\n\n//# sourceURL=webpack://webpack.demo/./index.js?");
+eval("const addText = text => {\n    const div = document.createElement('div');\n    div.innerHTML = text;\n    document.body.appendChild(div);\n}\n\nconst getProcessText = () => {\n    if (false) {} else {\n        return '开发环境的代码';\n    }\n}\n\naddText(getProcessText())\n\nconst getUserText = () => {\n    // 假设客户的定制业务逻辑复杂，代码量上去了，可就不是这么易读了\n    if (false) {} else if (true){\n        return '运行客户bb 的代码';\n    } else {}\n}\n\naddText(getUserText())\n\n\n//# sourceURL=webpack://webpack.demo/./index.js?");
 
 /***/ })
 

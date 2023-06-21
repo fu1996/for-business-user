@@ -7,7 +7,7 @@ const WebpackResolverModePlugin = require('@fu1996/webapck-resolver-mode-plugin'
 // 使用cli 进行传参： https://webpack.docschina.org/api/cli/#environment-options
 module.exports = (env) => {
     // 0.初始的webpack 对象
-    console.log('init webpack config', env, process.env);
+    console.log('init webpack config', env, process.env.user);
     const {user, mode = 'development'} = env;
     // 1.将 user 绑定到 node 环境的 process 对象上
     process.env.user = user;

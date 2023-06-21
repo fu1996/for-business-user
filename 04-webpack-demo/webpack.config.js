@@ -5,12 +5,14 @@ const webpack = require('webpack');
 // 使用cli 进行传参： https://webpack.docschina.org/api/cli/#environment-options
 module.exports = (env) => {
     // 0.初始的webpack 对象
-    console.log('init webpack config', env, process.env);
+    console.log('init webpack config', env, process.env.user);
     const {user, mode = 'development'} = env;
-    // 1.将 user 绑定到 node 环境的 process 对象上
-    process.env.user = user;
+    // 验证 webpack 的 process 是否是node的 process
+    // 1.将 aa 绑定到 node 环境的 process 对象上
+    process.env.user = 'aa';
     // 2. 验证是否绑定成功
     console.log('current user', process.env.user);
+    // 3. 第三步可以注释掉 下面的 DefinePlugin 然后进行打包 分析打包产物
     /**
      * 此写法可以使用 webpack 配置类型 的自动补全
      * @type {import("webpack").Configuration}
