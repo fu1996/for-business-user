@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./getUserText.bb.js":
+/***/ "./getUserText.aa.js":
 /*!***************************!*\
-  !*** ./getUserText.bb.js ***!
+  !*** ./getUserText.aa.js ***!
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('运行客户bb 的代码');\n\n//# sourceURL=webpack://webpack.demo/./getUserText.bb.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('运行客户aa 的代码');\n\n//# sourceURL=webpack://webpack.demo/./getUserText.aa.js?");
 
 /***/ }),
 
@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _getUserText__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getUserText */ \"./getUserText.bb.js\");\n\n\nconst addText = text => {\n    const div = document.createElement('div');\n    div.innerHTML = text;\n    document.body.appendChild(div);\n}\n\nconst getProcessText = () => {\n    if (false) {} else {\n        return '开发环境的代码';\n    }\n}\n\naddText(getProcessText())\n\n// const getUserText = () => {\n//     // 假设客户的定制业务逻辑复杂，代码量上去了，可就不是这么易读了\n//     if (process.env.user === 'aa') {\n//         return '运行客户aa 的代码';\n//     } else if (process.env.user === 'bb'){\n//         return '运行客户bb 的代码';\n//     } else if (process.env.user === 'cc') {\n//         return '运行客户cc 的代码';\n//     }else {\n//         return '运行通用代码';\n//     }\n// }\n\nconst getUserText = () => _getUserText__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n\naddText(getUserText())\n\n\n//# sourceURL=webpack://webpack.demo/./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _getUserText__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./getUserText */ \"./getUserText.aa.js\");\n/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./test */ \"./test.aa.js\");\n\n\n\nconst addText = text => {\n    const div = document.createElement('div');\n    div.innerHTML = text;\n    document.body.appendChild(div);\n}\n\n// const getProcessText = () => {\n//     if (process.env.NODE_ENV === 'production') {\n//         return '生产环境的代码';\n//     } else {\n//         return '开发环境的代码';\n//     }\n// }\n\n// addText(getProcessText())\n\nconst getUserText = () => {\n    // 假设客户的定制业务逻辑复杂，代码量上去了，可就不是这么易读了\n    if (true) {\n        return Promise.resolve(/*! import() */).then(__webpack_require__.bind(__webpack_require__, /*! ./getUserText.aa */ \"./getUserText.aa.js\")).then(res => {\n            console.log('User Text', res)\n        });\n    } else {}\n}\n\n// const getUserText = () => getUserTextStr;\n\naddText(getUserText())\n\nconsole.log('test', _test__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack://webpack.demo/./index.js?");
+
+/***/ }),
+
+/***/ "./test.aa.js":
+/*!********************!*\
+  !*** ./test.aa.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('测试默认引入 aa');\n\n//# sourceURL=webpack://webpack.demo/./test.aa.js?");
 
 /***/ })
 
